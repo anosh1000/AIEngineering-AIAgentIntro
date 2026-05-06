@@ -1,19 +1,9 @@
-# Getting Started
-Install the dependencies and run the project
-```
-npm install
-npm start
-```
-
-Head over to https://vitejs.dev/ to learn more about configuring vite
-## About Scrimba
-
-At Scrimba our goal is to create the best possible coding school at the cost of a gym membership! 💜
-If we succeed with this, it will give anyone who wants to become a software developer a realistic shot at succeeding, regardless of where they live and the size of their wallets 🎉
-The Fullstack Developer Path aims to teach you everything you need to become a Junior Developer, or you could take a deep-dive with one of our advanced courses 🚀
-
-- [Our courses](https://scrimba.com/courses)
-- [The Frontend Career Path](https://scrimba.com/fullstack-path-c0fullstack)
-- [Become a Scrimba Pro member](https://scrimba.com/pricing)
-
-Happy Coding!
+Interactive chatbot UI using a ReAct AI Agent with openAI automated function calls
+If the user asks "What are some fun activities to do?", the agent will decide it needs to run the function getLocation(), then it will decide it needs to run getCurrentWeather() passing in the location as the argument. Then, it will decide it has enough information to answer the user's question and will output a thoughtful response based off the system prompt.
+<pre>
+  Topics Covered
+  ReAct Agent - Allowing openai API to decide which function(s) to call. Use output of function(s) in final response back to user
+  Main idea of ReAct Agents is the looping of calling functions until agent decides it has enough information to answer user
+  Old way of automating function calls used Regex, tool_calls, looping, max_iterations, pushing function outputs to messages array, and creating object of function names to find the function based off the string containing the function name passed by the agent. 
+  Now, openai.chat.completions.runTools automates the process.
+</pre>
